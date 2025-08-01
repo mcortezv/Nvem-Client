@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { StickyNavbar } from './components/Navbar.jsx'
 import { HeroSection16 } from './components/HeroSection.jsx'
-import { FooterWithSocialLinks } from './components/footer.jsx'
+import { FooterWithSocialLinks } from './components/Footer.jsx'
 import { SidebarDark } from './components/SidebarSecction.jsx'
 
 function App() {
