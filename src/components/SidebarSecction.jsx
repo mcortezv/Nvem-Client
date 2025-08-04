@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {
   List,
   Card,
@@ -38,18 +39,18 @@ export function SidebarDark() {
   return (
     <Card
       color="gray"
-      className="h-[calc(100vh-2rem)] w-full max-w-[20rem] ml-4 p-6 shadow-md"
+      className="h-[calc(100vh-2rem)] w-full max-w-[20rem] mt-4 ml-4 p-6 shadow-md"
     >
-      <div className="mb-2 flex items-center gap-4 p-4">
+      <Link to="/" className="mb-2 flex items-center gap-4 p-4">
         <img
-          src="https://www.material-tailwind.com/logos/mt-logo.png"
+          src="./icon.webp"
           alt="brand"
           className="h-9 w-9"
         />
         <Typography className="text-lg font-bold text-gray-300">
-          Material Tailwind
+          Nvem
         </Typography>
-      </div>
+      </Link>
       <hr className="my-2 border-gray-800" />
       <List>
         <Accordion open={open === 1}>
@@ -62,11 +63,11 @@ export function SidebarDark() {
             <ListItemPrefix>
               <Avatar
                 size="sm"
-                src="https://www.material-tailwind.com/img/avatar1.jpg"
+                src=""
               />
             </ListItemPrefix>
             <Typography className="mr-auto font-normal text-inherit">
-              Brooklyn Alice
+              Manuel Cortez
             </Typography>
             <ChevronDownIcon
               strokeWidth={3}

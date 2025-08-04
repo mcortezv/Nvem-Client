@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {
   Navbar,
   MobileNav,
@@ -8,6 +9,7 @@ import {
   Card,
 } from "@material-tailwind/react";
 import logo from "../assets/logo.webp"
+import { CryptoLogin } from "./Login.jsx"
  
 export function StickyNavbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -27,9 +29,9 @@ export function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
-        </a>
+        <Link to="/dashboard" className="flex items-center">
+          Dashboard
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -83,6 +85,7 @@ export function StickyNavbar() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-x-1">
               <Button
+                onClick={CryptoLogin}
                 variant="text"
                 size="sm"
                 className="hidden lg:inline-block"

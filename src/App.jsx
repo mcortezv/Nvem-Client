@@ -1,18 +1,19 @@
 import { useState } from 'react'
-import { StickyNavbar } from './components/Navbar.jsx'
-import { HeroSection16 } from './components/HeroSection.jsx'
-import { FooterWithSocialLinks } from './components/Footer.jsx'
-import { SidebarDark } from './components/SidebarSecction.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <StickyNavbar></StickyNavbar>
-      <HeroSection16></HeroSection16>
-      <SidebarDark></SidebarDark>
-      <FooterWithSocialLinks></FooterWithSocialLinks>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
